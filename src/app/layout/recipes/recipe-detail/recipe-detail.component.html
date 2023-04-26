@@ -1,13 +1,13 @@
 <div class="row">
   <div class="col-xs-12">
     <img
-      src="https://placehold.jp/3d4070/ffffff/150x150.png?text=recipe_03"
-      alt=""
+      [src]="recipeData.imagePath"
+      [alt]="recipeData.name"
       class="img-responsive" />
   </div>
   <div class="row">
     <div class="col-xs-12">
-      <h1>Recipe Name</h1>
+      <h1>{{ recipeData.name }}</h1>
     </div>
   </div>
   <div class="row">
@@ -25,7 +25,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-xs-12">Description</div>
+    <div class="col-xs-12">{{ recipeData.description }}</div>
   </div>
   <div class="row">
     <div class="col-xs-12">Ingredients</div>

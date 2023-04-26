@@ -14,8 +14,10 @@
       [class.collapse]="collapsed"
       (window:resize)="(collapsed)">
       <ul class="nav navbar-nav">
-        <li><a href="#" (click)='onNavButtonClick($event)'>Recipes</a></li>
-        <li><a href="#" (click)='onNavButtonClick($event)'>Shopping List</a></li>
+        <li><a href="#" (click)="onNavButtonClick($event)">Recipes</a></li>
+        <li>
+          <a href="#" (click)="onNavButtonClick($event)">Shopping List</a>
+        </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
