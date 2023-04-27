@@ -1,11 +1,6 @@
-import {
-  Component,
-  ElementRef,
-  EventEmitter,
-  Output,
-  ViewChild,
-} from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Ingredient } from '../../../shared/ingredient.model';
+import { ShoppingListService } from '../shoppingList.service';
 
 @Component({
   selector: 'app-shopping-edit',
@@ -15,7 +10,8 @@ import { Ingredient } from '../../../shared/ingredient.model';
 export class ShoppingEditComponent {
   @ViewChild('nameInput') nameInputRef: ElementRef;
   @ViewChild('amountInput') amountInputRef: ElementRef;
-  @Output() ingredientAdded = new EventEmitter<Ingredient>();
+
+  constructor(private shoppingListService: ShoppingListService) {}
 
   onAddItem() {
     const ingredientName = this.nameInputRef.nativeElement.value;
@@ -24,6 +20,7 @@ export class ShoppingEditComponent {
     if (!isNaN(Number(ingredientAmount))) {
       itemAmountNumber = +ingredientAmount;
     }
-    this.ingredientAdded.emit(new Ingredient(ingredientName, itemAmountNumber));
+    const newIngredient = new Ingredient(ingredientName, itemAmountNumber);
+    this.shoppingListService.addIngredient(newIngredient);
   }
 }
