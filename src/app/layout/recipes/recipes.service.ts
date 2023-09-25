@@ -20,7 +20,7 @@ export class RecipesService {
         new Ingredient('Garlic', 1),
         new Ingredient('Salt', 1),
         new Ingredient('Pepper', 1),
-      ],
+      ]
     ),
     new Recipe(
       'Creamy Chicken Pasta',
@@ -34,7 +34,7 @@ export class RecipesService {
         new Ingredient('Garlic', 1),
         new Ingredient('Salt', 1),
         new Ingredient('Pepper', 1),
-      ],
+      ]
     ),
     new Recipe(
       'Chicken Parmesan',
@@ -48,12 +48,11 @@ export class RecipesService {
         new Ingredient('Basil', 1),
         new Ingredient('Salt', 1),
         new Ingredient('Pepper', 1),
-      ],
+      ]
     ),
   ];
 
-  constructor(private shoppingListService: ShoppingListService) {
-  }
+  constructor(private shoppingListService: ShoppingListService) {}
 
   getRecipeList() {
     return this.recipeList.slice();
