@@ -13,7 +13,7 @@ import { ShoppingEditComponent } from './layout/shopping-list/shopping-edit/shop
 import { DropdownDirective } from './shared/dropdown.directive';
 import { ShoppingListService } from './layout/shopping-list/shoppingList.service';
 import { AppRoutingModule } from './app-routing.module';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
 import { RecipeResolverService } from './layout/recipes/recipe-list/recipe-item/recipe-resolver.service';
 import { RecipeStartComponent } from './layout/recipes/recipe-start/recipe-start.component';
 import { RecipeEditComponent } from './layout/recipes/recipe-edit/recipe-edit.component';
