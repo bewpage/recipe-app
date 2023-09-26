@@ -24,11 +24,14 @@ export class ShoppingListService {
     this.ingredients = ingredients;
   }
 
-  addIngredients(ingredient: Ingredient) {
+  addIngredient(ingredient: Ingredient) {
     this.ingredients.push(ingredient);
     this.ingredientsAdded.emit(this.ingredients.slice());
-    // let tempIngredient: Ingredient[] = this.getIngredientsList();
-    // tempIngredient.push(ingredient);
-    // this.setIngredients(tempIngredient);
+  }
+
+  addIngredients(ingredients: Ingredient[]) {
+    this.ingredients.push(...ingredients);
+    // add copy of ingredients array
+    this.ingredientsAdded.emit(this.ingredients.slice());
   }
 }

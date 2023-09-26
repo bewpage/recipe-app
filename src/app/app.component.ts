@@ -9,6 +9,7 @@ export class AppComponent {
   showFeature: string = '';
 
   onNavButtonClicked(data: { buttonName: string }) {
-    this.showFeature = data.buttonName.toLowerCase();
+    console.log('onNavButtonClicked', data.buttonName);
+    // this.showFeature = data.buttonName.toLowerCase();
   }
 }
