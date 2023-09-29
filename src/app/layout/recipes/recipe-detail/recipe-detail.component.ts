@@ -38,4 +38,9 @@ export class RecipeDetailComponent implements OnInit {
     // go up one lebvle and then add id and edit to the route url
     this.router.navigate(['../', this.id, 'edit'], { relativeTo: this.route });
   }
+
+  deleteRecipe() {
+    this.recipesService.deleteRecipe(this.id);
+    this.router.navigate(['/recipes']);
+  }
 }
